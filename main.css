@@ -24,13 +24,17 @@ p {
     color: var(--text-color);
 }
 
+a {
+    text-decoration: none;
+}
+
 .t-center {
     text-align: center;
 
 }
 
 .btn {
-    padding: 15px 10px;
+    padding: 10px 7px;
     width: 150px;
     text-align: center;
     margin: 15px 0px;
@@ -60,10 +64,11 @@ p {
 }
 
 .contents {
+
     max-width: 1100px;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 15px auto;
 
     border: 1px solid rgb(75, 75, 75);
 }
@@ -74,10 +79,10 @@ p {
 
 .contents ol li {
     padding: 10px;
-    border-bottom: 1px solid black;
-
-
-    
+    border-bottom: 1px solid rgb(140, 140, 140);
+    font-weight: 500;
+    width: 30%;
+    margin: 15px 0px
 }
 
 
