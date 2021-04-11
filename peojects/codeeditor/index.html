@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        textarea {
+            width: 32%;
+            color: rgb(221, 221, 221);
+            min-height: 250px;
+            overflow: scroll;
+            background: #1f1f1f;
+            outline: none;
+            font-family: Courier, sans-serif;
+            font-size: 14px;
+        }
+
+        .css {
+            color: rgb(44, 123, 241);
+        }
+
+        .js {
+            color: rgb(250, 250, 107);
+        }
+
+        iframe {
+            bottom: 0;
+            position: relative;
+            width: 100%;
+            height: 35em;
+        }
+
+        .flex {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .run {
+        
+        
+          
+         color: rgb(0, 128, 79);
+        
+        }
+
+
+        @media only screen and (max-width: 700px) {
+
+            .flex {
+
+
+                flex-direction: column;
+                width: 100%;
+            }
+
+            textarea {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Code Editor</h1>
+    <div class="flex">
+        <textarea id="html" placeholder="HTML"></textarea>
+        <textarea id="css" class="css" placeholder="CSS"></textarea>
+        <textarea id="js" class="js" placeholder="JavaScript"></textarea>
+    </div>
+    <h1 style="text-align: center;" class="run">Live Results</h1>
+    <iframe id="code"></iframe>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
