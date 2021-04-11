@@ -1,8 +1,8 @@
 function compile() {
-    var html = document.getElementById("html");
-    var css = document.getElementById("css");
-    var js = document.getElementById("js");
-    var code = document.getElementById("code").contentWindow.document;
+    let html = document.getElementById("html");
+    let css = document.getElementById("css");
+    let js = document.getElementById("js");
+    let code = document.getElementById("code").contentWindow.document;
 
     document.body.onkeyup = function () {
         code.open();
@@ -19,4 +19,27 @@ function compile() {
     };
 }
 
+
+
+
 compile()
+
+
+// const themeSwitch = document.querySelector('.btn');
+
+// themeSwitch.addEventListener('change', () => {
+//   document.body.classList.toggle('black');
+//   console.log("clicked");
+// });
+
+let btn=document.getElementById("btn")
+function darkMode() {
+
+     let element = document.getElementById("man");
+    element.classList.toggle("black");
+
+ 
+
+}
+
+
