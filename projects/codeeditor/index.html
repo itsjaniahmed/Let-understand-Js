@@ -86,6 +86,7 @@
 
 
         textarea {
+
             background: var(--textarea-bg);
             color: var(--text-color);
             width: 32%;
@@ -174,11 +175,18 @@
 
         </div>
         <h1 style="text-align: center;">Code Editor</h1>
-        <div class="flex">
-            <textarea id="html" placeholder="Write Html"></textarea>
-            <textarea id="css" class="area css" placeholder="CSS"></textarea>
-            <textarea id="js" class="area js" placeholder="JavaScript"></textarea>
-        </div>
+        <form action="./savecode.php" method="POST">
+            <div class="flex">
+
+                <textarea id="html" name="html" placeholder="Write Html"></textarea>
+                <textarea id="css" name="css" class="area css" placeholder="CSS"></textarea>
+                <textarea id="js" name="js" class="area js" placeholder="JavaScript"></textarea>
+
+            </div>
+
+            <br>
+            <input type="submit" name="submit" value="Save Code" class="btn">
+        </form>
         <h1 style="text-align: center;" class="run">Live Results</h1>
         <iframe id="code"></iframe>
 
