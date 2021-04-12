@@ -18,7 +18,7 @@
         body {
             padding: 0px;
             margin: 0px;
-            overflow-x: hidden;
+            /* overflow-x: hidden; */
         }
 
         .black {
@@ -59,6 +59,57 @@
             gap: 20px;
         }
 
+        .main-area {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .main-area .code-side {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+
         .header {
 
             display: flex;
@@ -89,8 +140,8 @@
 
             background: var(--textarea-bg);
             color: var(--text-color);
-            width: 32%;
-            min-height: 250px;
+            width: 600px;
+            min-height: 60vh;
             overflow: scroll;
             outline: none;
             font-size: 14px;
@@ -108,8 +159,9 @@
 
         iframe {
             position: relative;
-            width: 90%;
-            height: 35em;
+            width: 500px;
+            height: 60vh;
+
             background-color: white;
             border: none;
 
@@ -175,20 +227,64 @@
 
         </div>
         <h1 style="text-align: center;">Code Editor</h1>
-        <form action="./savecode.php" method="POST">
-            <div class="flex">
 
-                <textarea id="html" name="html" placeholder="Write Html"></textarea>
-                <textarea id="css" name="css" class="area css" placeholder="CSS"></textarea>
-                <textarea id="js" name="js" class="area js" placeholder="JavaScript"></textarea>
+        <div style="display: flex; justify-content: space-around; align-items: center;">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'html')">html</button>
+                <button class="tablinks" onclick="openCity(event, 'css')">css</button>
+                <button class="tablinks" onclick="openCity(event, 'js')">js</button>
+            </div>
+            <div>
+                <h1 style="text-align:center">Live results</h1>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: space-between;">
+            <div>
+                <div id="html" class="tabcontent">
+                    <textarea id="html" name="html" placeholder="Write Html"></textarea>
+
+                </div>
+
+                <div id="css" class="tabcontent">
+                    <textarea id="css" name="css" class="css" placeholder="CSS"></textarea>
+                </div>
+
+                <div id="js" class="tabcontent">
+                    <textarea id="js" name="js" class="js" placeholder="JavaScript"></textarea>
+                </div>
 
             </div>
+            <div>
 
-            <br>
-            <input type="submit" name="submit" value="Save Code" class="btn">
-        </form>
-        <h1 style="text-align: center;" class="run">Live Results</h1>
-        <iframe id="code"></iframe>
+                <iframe id="code"></iframe>
+            </div>
+
+        </div>
+
+
+
+        <!-- <div class="main-area">
+
+
+            <form class="code-side" action="./savecode.php" method="POST">
+
+
+                <textarea id="html" name="html" placeholder="Write Html"></textarea>
+                <textarea id="css" name="css" class="css" placeholder="CSS"></textarea>
+                <textarea id="js" name="js" class="js" placeholder="JavaScript"></textarea>
+
+
+                <br>
+                <input type="submit" name="submit" value="Save Code" class="btn">
+            </form>
+
+            <div>
+                <h1 style="text-align: center;" class="run">Live Results</h1>
+                <iframe id="code"></iframe>
+            </div>
+        </div> -->
+
+
 
     </div>
 
