@@ -1,0 +1,151 @@
+:root {
+
+    --dark: #212121;
+    --black: #101010;
+    --white: rgba(233, 231, 214, 0.952);
+
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+  
+}
+
+.black {
+    --body-bg: var(--dark);
+    --text-color: var(--white);
+    --textarea-bg: var(--black);
+    --textarea-color: var(--white);
+}
+
+.white {
+    --body-bg: var(--white);
+    --text-color: var(--black);
+    --textarea-bg: var(--white);
+    --textarea-color: var(--dark);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+a,
+t,
+h1,
+p {
+    color: var(--text-color);
+}
+
+
+.main {
+    background: var(--body-bg);
+    text-align: center;
+    font-family: Courier, sans-serif;
+}
+
+
+
+
+textarea {
+
+    background: var(--textarea-bg);
+    color: var(--text-color);
+    width: 100%;
+    min-height: 155px;
+    overflow: scroll;
+    outline: none;
+    font-size: 14px;
+    margin: auto;
+    overflow-x: hidden;
+
+}
+
+
+
+iframe {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    border: none;
+    resize: horizontal;
+
+}
+
+.w-50 {
+    width: 40%;
+}
+
+.flex {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: var(--text-color);
+    color: var(--body-bg)
+}
+
+.col {
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .btn {
+        padding: 5px 10px;
+
+    }
+
+    .flex {
+
+
+        flex-direction: column;
+        width: 100%;
+    }
+
+    textarea {
+        width: 97%;
+    }
+
+
+    .header {
+        flex-direction: column;
+    }
+
+}
