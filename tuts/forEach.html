@@ -38,15 +38,16 @@
     Result: <p id="result"></p>
 
     <script>
-        let calculate = document.getElementById("calculate");
-        const selectOp = ["+", "-", "*", "/"];
+        const calculate = document.getElementById("calculate");
+        const selectOp = ["+", "-", "*", "/", "%"];
 
 
         calculate.addEventListener("click", () => {
             const num1 = parseFloat(document.getElementById("num1").value);
             const num2 = parseFloat(document.getElementById("num2").value);
+
             const selectOperator = document.getElementById("selectOperator").value;
-            const operations = [num1 + num2, num1 - num2, num1 * num2, num1 / num2];
+            const operations = [num1 + num2, num1 - num2, num1 * num2, num1 / num2, num1 % num2];
 
             selectOp.forEach((value, index) => {
                 if (value == selectOperator) {
